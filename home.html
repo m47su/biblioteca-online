@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/png" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script type="module" src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Início | Biblioteca Online</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#profile" class="logo">
+        <img src="assets/img/logohome.png" class="img-logo" />
+        <!-- substituir aqui com o logo do id pelo banco de dados -->
+      </a>
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="#home"><i class="bx bx-home"></i></a>
+        <a href="#favoritos"><i class="bx bx-heart"></i></a>
+        <a href="#publicar"><i class="bx bx-plus"></i></a>
+      </nav>
+
+      <div search-container>
+        <div class="search-container">
+          <input
+            type="text"
+            placeholder="Buscar por título..."
+            class="search-input"
+          />
+          <button class="search-btn" aria-label="Buscar">
+            <i class="bx bx-search"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <div class="home-text">
+          <h2 class="heading">Biblioteca on-line</h2>
+          <p>
+            Aqui você encontra um espaço aberto ao conhecimento, com livros
+            gratuitos e de acesso legal, pensados para leitores de todas as
+            idades e interesses. Nosso objetivo é incentivar a leitura e a
+            partilha de saberes, sempre com respeito aos direitos autorais e à
+            valorização da literatura. Além de explorar diferentes gêneros e
+            autores, você também pode publicar sua própria obra e compartilhá-la
+            com outros leitores.
+          </p>
+          <div class="home-btn-group">
+            <a href="#" class="home-btn-group">Leia Agora</a>
+            <a href="#" class="home-btn-group">Publicar Livro</a>
+          </div>
+        </div>
+        <div class="home-img">
+          <img id="home" src="assets/img/estante.png" />
+        </div>
+      </div>
+    </section>
+
+    <section class="emalta" id="emalta">
+      <h2 class="heading">Em alta esse mês</h2>
+      <h1>Esses foram os livros mais lidos esse mês pelos usuários</h1>
+      <div class="slider">
+        <div class="list"></div>
+
+        <div class="buttons">
+          <button class="prev-btn">&#10094;</button>
+          <button class="next-btn">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="recentes" id="recentes">
+      <h2 class="heading">Mais recentes</h2>
+      <h1>Esses foram os livros recém publicados</h1>
+      <div class="slider">
+        <div class="list"></div>
+
+        <div class="buttons">
+          <button class="prev-btn">&#10094;</button>
+          <button class="next-btn">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="terror" id="terror">
+      <h2 class="heading">Terror</h2>
+      <h1>Livros de terror mais amados</h1>
+      <div class="slider">
+        <div class="list"></div>
+
+        <div class="buttons">
+          <button class="prev-btn">&#10094;</button>
+          <button class="next-btn">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="romance" id="romance">
+      <h2 class="heading">Romance</h2>
+      <h1>Livros de romance mais amados</h1>
+      <div class="slider">
+        <div class="list"></div>
+
+        <div class="buttons">
+          <button class="prev-btn">&#10094;</button>
+          <button class="next-btn">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-about">
+          <h2>Sobre</h2>
+          <p>
+            Biblioteca online é uma plataforma digital que oferece acesso
+            gratuito a uma vasta coleção de livros em diversos gêneros e
+            formatos. Nosso objetivo é promover a leitura e o compartilhamento
+            de conhecimento.
+          </p>
+          <img
+            src="assets/img/logohome.png"
+            alt="Logo Biblioteca"
+            class="footer-logo"
+          />
+        </div>
+
+        <div class="footer-contacts">
+          <h2>Contatos</h2>
+          <ul>
+            <li><i class="fas fa-envelope"></i> elivrosonline@gmail.com</li>
+            <li><i class="fab fa-instagram"></i> bibliotecaonline.proj</li>
+            <li><i class="fab fa-linkedin"></i> Projeto Biblioteca Online</li>
+            <li><i class="fab fa-github"></i> BibliotecaOnline</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright-container">
+        <p class="copyright">
+          Copyright © 2024 Todos os direitos Reservados - Biblioteca Online
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

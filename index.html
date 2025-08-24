@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/png" />
+    <link rel="stylesheet" href="assets/css/login.css" />
+    <title>Entrar</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- fazer login -->
+      <div class="login-wrap active">
+        <div class="title">
+          <h1>Entrar</h1>
+        </div>
+
+        <form method="POST" action="#">
+          <div class="input-area">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="on"
+              required
+            />
+            <label for="email">E-mail</label>
+          </div>
+
+          <div class="input-area">
+            <input type="password" name="senha1" id="password" required />
+            <label for="password">Senha</label>
+          </div>
+
+          <div class="forgot-pass">
+            <a href="#">Esqueceu a senha?</a>
+          </div>
+
+          <div class="button-area">
+            <button type="submit" class="login-btn">Entrar</button>
+          </div>
+        </form>
+
+        <div class="form-toggle-area">
+          <p>Nâo tem uma conta? <span id="toggle-signup">Inscreva-se</span></p>
+        </div>
+      </div>
+
+      <!-- cadastrar usuario -->
+      <div class="signup-wrap">
+        <div class="title">
+          <h1>Se inscreva</h1>
+        </div>
+
+        <form method="POST" action="#">
+          <div class="input-area">
+            <input
+              type="text"
+              name="login"
+              id="name"
+              autocomplete="off"
+              required
+            />
+            <label for="name">Nome</label>
+          </div>
+
+          <div class="input-area">
+            <input
+              type="text"
+              name="email"
+              id="email"
+              autocomplete="off"
+              required
+            />
+            <label for="email">Email</label>
+          </div>
+
+          <div class="input-area">
+            <input type="password" name="senha" id="password" required />
+            <label for="password">Senha</label>
+          </div>
+
+          <div class="button-area">
+            <button type="submit" class="signup-btn">Cadastrar</button>
+          </div>
+        </form>
+
+        <div class="form-toggle-area">
+          <p>Já possui uma conta? <span id="toggle-login">Entre agora</span></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+  </body>
+</html>
