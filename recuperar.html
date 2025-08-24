@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/png" />
+    <link rel="stylesheet" href="assets/css/login.css" />
+    <title>Recuperar Senha</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- recuperar senha -->
+      <div class="login-wrap active">
+        <div class="title">
+          <h1>Recuperar Senha</h1>
+        </div>
+
+       <form method="POST" action="#">  <!-- colocar a ação de recuperação de senha -->
+          <div class="input-area">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="on"
+              required
+            />
+            <label for="email">Digite seu e-mail...</label>
+          </div>
+
+          <div class="button-area">
+            <button type="submit" class="login-btn">Enviar</button>
+          </div>
+        </form>
+
+        <div class="form-toggle-area">
+          <p>Um e-mail de recuperação de senha será enviado.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+  </body>
+</html>
