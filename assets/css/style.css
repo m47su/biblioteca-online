@@ -248,6 +248,133 @@ section {
   background-color: #1e223b;
 }
 
+/*POP UP*/
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 3rem 4rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: scale(0.9) translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.popup-overlay.active .popup-content {
+  transform: scale(1) translateY(0);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  color: #888;
+  cursor: pointer;
+  line-height: 1;
+}
+.close-btn:hover { color: #333; }
+
+.popup-content h2 { text-align: center; color: #2f3559; font-size: 2.5rem; margin-top: 0; }
+.popup-content p { text-align: center; font-size: 1.6rem; margin-bottom: 2rem; color: #555; max-width: 100%;}
+
+#livro-form .form-group { margin-bottom: 1.5rem; }
+#livro-form label { display: block; margin-bottom: 0.8rem; font-size: 1.5rem; color: #333; font-weight: 600; }
+#livro-form input[type="text"],
+#livro-form input[type="email"],
+#livro-form textarea { width: 100%; padding: 1.2rem; border: 1px solid #d1d5db; border-radius: 8px; font-size: 1.6rem; box-sizing: border-box; }
+#livro-form input:focus, #livro-form textarea:focus { outline: none; border-color: #6d28d9; box-shadow: 0 0 0 2px rgba(109, 40, 217, 0.2); }
+#livro-form input[type="file"] { width: 100%; font-size: 1.4rem; }
+#livro-form .radio-group-options { display: flex; align-items: center; gap: 2.5rem; margin-top: 1rem; justify-content: center;}
+#livro-form .radio-option { display: flex; align-items: center; gap: 0.8rem; }
+#livro-form .radio-option label { display: inline-block; margin-bottom: 0; font-weight: 500; }
+#livro-form .btn { width: 100%; padding: 1.2rem; font-size: 1.8rem; margin-top: 1rem; }
+
+#livro-form .btn {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  background-color: #2f3559; 
+  color: white;
+  border-radius: 8px;
+  border: none; 
+  cursor: pointer;
+  
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#livro-form .btn:hover { 
+  background-color: #1e223b; 
+  transform: scale(1.03); 
+}
+
+.swal2-popup {
+  border-radius: 20px !important;
+  width: 90% !important;  
+  max-width: 450px !important; 
+  padding: 2.5rem !important; 
+  height: 240px;
+}
+
+.swal2-title{
+  font-size: 2rem !important;
+}
+
+.swal2-html-container{
+  font-size: 1.5rem !important;
+}
+
+.swal2-confirm.swal2-styled {
+  background-color: #2f3559 !important; 
+  color: white !important;
+  font-size: 1.6rem !important;
+  padding: 0.8rem 2.5rem !important;
+  border-radius: 10px !important; 
+  box-shadow: none !important; 
+  transition: background-color 0.2s ease;
+}
+
+.swal2-confirm.swal2-styled:hover {
+  background-color: #1e223b !important;
+}
+
+.form-group:has(input[required]) > label::after,
+.form-group:has(textarea[required]) > label::after {
+  
+  content: " *";       
+  color: #d93025;   
+  font-weight: bold;
+  font-size: 1.6rem;  
+  margin-left: 2px;    
+}
+
 /* EM ALTA */
 .emalta {
   min-height: 10vh;

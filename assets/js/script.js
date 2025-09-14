@@ -26,6 +26,51 @@ menuIcon.onclick = () => {
   navbar.classList.toggle("active");
 };
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const openPopupBtn = document.getElementById("open-popup-btn");
+  const closePopupBtn = document.getElementById("close-popup-btn");
+  const popupOverlay = document.getElementById("popup-overlay");
+  const livroForm = document.getElementById("livro-form");
+
+  const openPopup = () => {
+    popupOverlay.classList.add("active");
+  };
+
+
+  const closePopup = () => {
+    popupOverlay.classList.remove("active");
+  };
+
+  openPopupBtn.addEventListener("click", (event) => {
+    event.preventDefault(); 
+    openPopup();
+  });
+
+  closePopupBtn.addEventListener("click", closePopup);
+
+  popupOverlay.addEventListener("click", (event) => {
+    if (event.target === popupOverlay) {
+      closePopup();
+    }
+  });
+livroForm.addEventListener("submit", (event) => {
+  event.preventDefault(); 
+
+  closePopup(); 
+
+  livroForm.reset(); 
+
+  Swal.fire({
+    title: "Enviado com sucesso!",
+    text: "Agradecemos sua contribuição. Nossa equipe irá avaliar.",
+    icon: "success"
+  });
+});
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM carregado. Iniciando script dinâmico do carrossel.");
 

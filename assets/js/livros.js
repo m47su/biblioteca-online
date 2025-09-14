@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const livro = {
     capa: "assets/img/capa (6).png",
+    tags: ["Romance", "Drama"],
     titulo: "Está chovendo estrelas",
     sinopse:
       "Está chovendo estrelas é um livro que retrata a história de Laura, ela é uma garota autista que sonha em ser uma astronauta, estuda astronomia desde seus 8 anos, porém tudo muda quando sua mãe morre em um acidente trágico de carro e ela precisa encarar o luto enquanto estuda para o vestibular. Nessa história você vai ver uma garota aprendendo a lidar com uma dor inimaginável e tirando forças para alcançar seus sonhos.",
@@ -63,6 +64,19 @@ document.addEventListener("DOMContentLoaded", () => {
   function carregarDadosDoLivro() {
     //livros
     document.getElementById("capa-livro").src = livro.capa;
+    // CÓDIGO NOVO E CORRETO
+const tagsContainer = document.getElementById("tags");
+tagsContainer.innerHTML = ""; // Limpa quaisquer tags antigas
+
+livro.tags.forEach(tagText => {
+  // Cria um elemento <span> para cada tag
+  const tagElement = document.createElement("span");
+  tagElement.className = "tag-item"; // Adiciona uma classe para estilização
+  tagElement.textContent = tagText;  // Define o texto da tag
+
+  // Adiciona a nova tag dentro da div "tags"
+  tagsContainer.appendChild(tagElement);
+});
     document.getElementById("titulo-livro").textContent = livro.titulo;
     document.getElementById("sinopse-livro").textContent = livro.sinopse;
 
