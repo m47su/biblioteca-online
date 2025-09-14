@@ -125,12 +125,12 @@ section {
 }
 
 .search-input {
-  width: 250px; 
+  width: 250px;
   height: 40px;
-  border-radius: 20px; 
+  border-radius: 20px;
   border: 1px solid #ddd;
   padding: 0 40px 0 20px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   outline: none;
   transition: all 0.3s ease;
 }
@@ -141,8 +141,8 @@ section {
 }
 
 .search-btn {
-  position: absolute; 
-  right: 5px; 
+  position: absolute;
+  right: 5px;
   top: 50%;
   transform: translateY(-50%);
   background: none;
@@ -163,7 +163,6 @@ section {
 .search-btn:hover i {
   color: #2f3559;
 }
-
 
 /* HOME */
 .home {
@@ -579,31 +578,47 @@ section {
   transform: scale(1.1);
 }
 
-
 /*PÁGINA LIVROS*/
 
-.livro-info{
-  padding: 0 0 0 5%;
+.livro-detalhe {
+  padding: 8rem 5% 2rem;
+  background-color: white;
+  position: relative;
+  padding-top: 100px;
 }
 
-.livro-detalhe {
-    padding: 8rem 5% 2rem;
-    background-color: white;
+.back-arrow {
+  position: initial;
+}
+
+.back-arrow i {
+  font-size: 4rem;
+  color: #2f3559;
+  transition: color 0.3s ease;
+}
+
+.back-arrow:hover i {
+  color: #5c67b2;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.livro-info {
+  padding: 0 5% 0 5%;
 }
 
 .livro-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
 .livro-capa img {
-    max-width: 250px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 
 .livro-info h2 {
   position: relative;
@@ -620,152 +635,197 @@ section {
 }
 
 .livro-info h3 {
-    font-size: 1.8rem;
-    color: #2f3559;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  color: #2f3559;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .livro-info p {
   font-size: 23px;
   line-height: 150%;
-  max-width: 83%;
+  max-width: 100%;
   text-align: justify;
   font-family: "Nunito", sans-serif;
   color: #2f3559;
   font-weight: 500;
 }
 
+.livro-btn-group {
+  display: flex;
+  margin-top: 24px;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.livro-btn-group a {
+  color: white;
+  border: 2px solid #fff;
+  background-color: #2f3559;
+  padding: 1rem 2rem;
+  border-radius: 24px;
+  font-size: 18px;
+  letter-spacing: 0.1rem;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  font-family: "Playfair Display";
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.livro-btn-group a:hover {
+  transform: scale(1.05);
+  background-color: #1e223b;
+}
+
+.tags {
+  margin-top: 1.5rem; 
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tag-item {
+  background-color: #fdeaf1; 
+  color: #c75c83;        
+  padding: 0.6rem 1.8rem;   
+  border-radius: 20px;       
+  font-size: 1.5rem;         
+  font-weight: 500;
+  text-transform: capitalize; 
+}
 
 /* AUTOR */
 .autor-section {
-    padding: 4rem 5%;
-    background-color: #fdf5f0; 
+  padding: 4rem 5%;
+  background-color: #fdf5f0;
 }
 
 .autor-section h2 {
-    font-size: 2rem;
-    color: #2f3559;
-    margin-bottom: 2rem;
-    padding: 0 0 0 1%;
+  font-size: 2rem;
+  color: #2f3559;
+  margin-bottom: 2rem;
+  padding: 0 0 0 1%;
 }
 
 .autor-content {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .autor-foto {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .autor-info h3 {
-    font-size: 2rem;
-    color: #E25879;
-    margin-bottom: 0.5rem;
+  font-size: 2rem;
+  color: #e25879;
+  margin-bottom: 0.5rem;
 }
 
-.autor-info p{
+.autor-info p {
   font-size: 2rem;
-  color: #2F3559;
+  color: #2f3559;
 }
 
 /* AVALIAÇÕES */
 .avaliacoes-section {
-    padding: 4rem 5%;
-    background-color: white;
+  padding: 4rem 5%;
+  background-color: white;
 }
 
 .avaliacoes-section h2 {
-    font-size: 2rem;
-    color: #2f3559;
-    margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #2f3559;
+  margin-bottom: 2rem;
 }
 
 /* CAIXA DE AVALIAÇÕES */
 .avaliar-box {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    background-color: #fdf5f0; 
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 3rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: #fdf5f0;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .avaliar-box img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 }
 
 .avaliar-box textarea {
-    flex-grow: 1;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 0.75rem;
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    resize: vertical;
-    min-height: 90px;
+  flex-grow: 1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  resize: vertical;
+  min-height: 90px;
 }
 
 .avaliar-box button {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #2f3559;
-    cursor: pointer;
-    align-self: center;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #2f3559;
+  cursor: pointer;
+  align-self: center;
 }
 
 /* AVALIAÇÕES EXISTENTES */
 #lista-avaliacoes {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .avaliacao-card {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .avaliacao-foto {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .avaliacao-conteudo strong {
-    font-size: 1.1rem;
-    color: #2f3559;
-    font-size: 2rem;
+  font-size: 1.1rem;
+  color: #2f3559;
+  font-size: 2rem;
 }
 
 .avaliacao-conteudo p {
-    margin-top: 0.25rem;
-    font-style: italic;
-    font-size: 1.5rem;
+  margin-top: 0.25rem;
+  font-style: italic;
+  font-size: 1.5rem;
 }
 
 .avaliacao-estrelas {
-    color: #FFD700; /* Cor dourada para as estrelas */
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    display: flex;
-    gap: 2px;
+  color: #ffd700; /* Cor dourada para as estrelas */
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 2px;
 }
 
 /* FOOTER */
