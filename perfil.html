@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>E-livro — Perfil</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&family=Nunito:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/perfil.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="perfil.html" class="logo" id="header-avatar">
+        <i
+          class="bx bx-user-circle"
+          style="font-size: 50px; color: #2f3559"
+        ></i>
+      </a>
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="home.html"><i class="bx bx-home"></i></a>
+        <a href="favoritos.html"><i class="bx bx-heart"></i></a>
+        <a href="publicar.html"><i class="bx bx-plus"></i></a>
+      </nav>
+      <div class="search-container">
+        <input
+          type="text"
+          placeholder="Buscar por título..."
+          class="search-input"
+        />
+        <button class="search-btn" aria-label="Buscar">
+          <i class="bx bx-search"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <div class="page-title">
+        <h1>Perfil</h1>
+        <p>Veja os detalhes do seu perfil aqui</p>
+      </div>
+
+      <section class="grid-top">
+        <article class="card profile-card">
+          <div class="avatar" id="profile-avatar">
+            <i
+              class="bx bx-user-circle"
+              style="font-size: 72px; color: #2f3559"
+            ></i>
+          </div>
+          <div class="profile-meta">
+            <h3>Lara Costa</h3>
+            <label class="edit-badge" for="upload-foto">
+              <i class="bx bx-edit"></i> editar foto
+              <input type="file" id="upload-foto" accept="image/*" hidden />
+            </label>
+          </div>
+        </article>
+
+        <article class="card pad relative">
+          <h2>Outros detalhes</h2>
+          <button
+            class="inline-edit"
+            aria-label="Editar detalhes"
+            data-open="editar-detalhes"
+          >
+            <i class="bx bx-edit"></i>
+          </button>
+          <div class="details">
+            <div class="field">
+              <b>Nome</b>
+              <div>Lara Costa</div>
+            </div>
+            <div class="field">
+              <b>E-mail</b>
+              <div>email@gmail.com</div>
+            </div>
+            <div class="field">
+              <b>Livros curtidos</b>
+              <div>10</div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section">
+        <h3>Senha</h3>
+        <div class="form-grid">
+          <label class="input">
+            <input
+              type="password"
+              id="senha-atual"
+              placeholder="Insira a senha atual"
+            />
+            <button
+              class="toggle"
+              type="button"
+              data-target="senha-atual"
+              aria-label="Mostrar senha"
+            >
+              <i class="bx bx-hide"></i>
+            </button>
+          </label>
+          <label class="input">
+            <input
+              type="password"
+              id="nova-senha"
+              placeholder="Insira nova senha"
+            />
+            <button
+              class="toggle"
+              type="button"
+              data-target="nova-senha"
+              aria-label="Mostrar senha"
+            >
+              <i class="bx bx-hide"></i>
+            </button>
+          </label>
+          <label class="input">
+            <input
+              type="password"
+              id="confirma-senha"
+              placeholder="Confirme nova senha"
+            />
+            <button
+              class="toggle"
+              type="button"
+              data-target="confirma-senha"
+              aria-label="Mostrar senha"
+            >
+              <i class="bx bx-hide"></i>
+            </button>
+          </label>
+        </div>
+        <div class="row-actions">
+          <button class="btn">Atualizar</button>
+        </div>
+      </section>
+
+      <section class="section danger">
+        <h3>Deletar conta</h3>
+        <small
+          >Quando você deleta sua conta, perde acesso a todos os livros
+          curtidos, mas seus livros publicados não somem, se quiser apagar,
+          delete-os manualmente.</small
+        >
+        <label class="check">
+          <input type="checkbox" id="confirmar-exclusao" />
+          <span>Desejo apagar minha conta e todos meus dados</span>
+        </label>
+        <div class="row-actions">
+          <button class="btn" id="apagar-btn" disabled>Apagar</button>
+        </div>
+      </section>
+    </main>
+
+    <div class="popup-overlay" id="editar-detalhes">
+      <div
+        class="popup-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="titulo-editar"
+      >
+        <button
+          class="close-btn"
+          type="button"
+          aria-label="Fechar"
+          data-close="editar-detalhes"
+        >
+          &times;
+        </button>
+        <h2 id="titulo-editar">Editar detalhes</h2>
+        <p>Atualize suas informações de perfil.</p>
+        <form id="form-editar-detalhes">
+          <div class="form-group">
+            <label for="det-nome">Nome</label>
+            <input
+              type="text"
+              id="det-nome"
+              name="nome"
+              placeholder="Digite seu nome"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="det-email">E-mail</label>
+            <input
+              type="email"
+              id="det-email"
+              name="email"
+              placeholder="Digite seu e-mail"
+              required
+            />
+          </div>
+          <button class="btn" type="submit">Salvar</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-about">
+          <h2>Sobre</h2>
+          <p>
+            Biblioteca online é uma plataforma digital que oferece acesso
+            gratuito a uma vasta coleção de livros em diversos gêneros e
+            formatos. Nosso objetivo é promover a leitura e o compartilhamento
+            de conhecimento.
+          </p>
+          <img
+            src="assets/img/logohome.png"
+            alt="Logo Biblioteca"
+            class="footer-logo"
+          />
+        </div>
+        <div class="footer-contacts">
+          <h2>Contatos</h2>
+          <ul>
+            <li><i class="bx bx-envelope"></i> elivrosonline@gmail.com</li>
+            <li><i class="bx bxl-instagram"></i> bibliotecaonline.proj</li>
+            <li><i class="bx bxl-linkedin"></i> Projeto Biblioteca Online</li>
+            <li><i class="bx bxl-github"></i> BibliotecaOnline</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/perfil.js"></script>
+  </body>
+</html>
