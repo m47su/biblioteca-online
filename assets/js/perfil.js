@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Mostrar ou ocultar senha
   document.querySelectorAll(".toggle").forEach((btn) => {
     btn.addEventListener("click", () => {
       const id = btn.getAttribute("data-target");
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Atualizar senha
   const senhaAtual = document.getElementById("senha-atual");
   const novaSenha = document.getElementById("nova-senha");
   const confirma = document.getElementById("confirma-senha");
@@ -61,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     apagarBtn.addEventListener("click", () => {
       if (!chk.checked) {
         Swal.fire({
-          icon: "info",
+          icon: "warning",
           title: "Confirmação necessária",
           text: "Marque a opção 'Desejo apagar minha conta e todos meus dados' para continuar.",
         });
@@ -94,7 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Abrir e fechar popup de editar detalhes
   document.querySelectorAll("[data-open]").forEach((btn) => {
     btn.addEventListener("click", () => {
       const targetId = btn.getAttribute("data-open");
@@ -151,7 +148,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Upload e atualização de avatar
   const fileInput = document.getElementById("upload-foto");
   const profileAvatar = document.getElementById("profile-avatar");
   const headerAvatar = document.getElementById("header-avatar");

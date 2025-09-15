@@ -8,10 +8,9 @@
   --shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
 }
 
-/* Título da página */
 .page-title {
   color: var(--ink);
-  margin: 2rem 0 3rem;
+  margin: 10rem 0 0rem;
 }
 .page-title h1 {
   font-family: "Playfair Display", serif;
@@ -25,7 +24,6 @@
   color: #6b6b75;
 }
 
-/* Layout do topo */
 .grid-top {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -46,7 +44,6 @@
   color: var(--ink);
 }
 
-/* Cartão do perfil */
 .profile-card {
   display: grid;
   grid-template-columns: 96px 1fr;
@@ -74,12 +71,11 @@
   border-radius: 50%;
 }
 
-/* garante que qualquer img dentro do header-avatar seja redonda */
 #header-avatar img {
   width: 50px;
   height: 50px;
-  border-radius: 50%; /* redondo */
-  object-fit: cover; /* não estica */
+  border-radius: 50%;
+  object-fit: cover;
   object-position: center;
   display: block;
 }
@@ -110,7 +106,6 @@
   border: 1px solid #ececf1;
 }
 
-/* Detalhes */
 .details {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -142,7 +137,6 @@
   cursor: pointer;
 }
 
-/* Seções */
 .section {
   margin-top: 2rem;
   padding: 2rem;
@@ -213,7 +207,6 @@
   background: var(--brand-d);
 }
 
-/* Botão de perigo */
 .danger .btn {
   background: #d94a4a;
 }
@@ -238,7 +231,6 @@
   height: 16px;
 }
 
-/* Popup */
 .popup-overlay {
   position: fixed;
   inset: 0;
@@ -291,14 +283,13 @@
   cursor: pointer;
 }
 
-/* Form Editar */
 #form-editar-detalhes .form-group {
   margin-bottom: 1.2rem;
 }
 #form-editar-detalhes label {
   display: block;
   font-size: 1.3rem;
-  color: #6b6b75;
+  color: #2f3559;
   margin-bottom: 0.4rem;
 }
 #form-editar-detalhes input[type="text"],
@@ -312,6 +303,10 @@
   color: #111;
   background: #fff;
   outline: none;
+}
+
+.profile-card .avatar img {
+  border-radius: 50% !important;
 }
 
 /* Responsividade */
@@ -332,7 +327,7 @@
   }
 }
 
-/* Customização do SweetAlert */
+/* sweetalert*/
 .swal2-popup {
   max-width: 420px !important;
   width: auto !important;
