@@ -1536,7 +1536,7 @@ img {
   height: 16px;
 }
 
-/* ===== Responsivo ===== */
+/*Responsividade*/
 @media (max-width: 920px) {
   .grid-top {
     grid-template-columns: 1fr;
@@ -1552,4 +1552,51 @@ img {
   .profile-card {
     grid-template-columns: 72px 1fr;
   }
+}
+
+/*Corrigindo bug do avatar*/
+
+#header-avatar img,
+.img-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50% !important;
+  display: block;
+}
+#header-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #fff; /* opcional, para deixar o círculo branco */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* opcional, sombra igual ao perfil */
+}
+
+#header-avatar i {
+  font-size: 32px;
+  color: #2f3559;
+  line-height: 1;
+}
+/* Avatar/ícone no header – padrão global */
+#header-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#header-avatar .bx {
+  font-size: 50px;
+  color: #2f3559;
+}
+
+/* Quando houver foto no header, ela é sempre redonda */
+#header-avatar img,
+.img-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50% !important;
+  display: block;
 }
