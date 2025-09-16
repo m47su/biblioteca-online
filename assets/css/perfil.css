@@ -224,7 +224,7 @@
 
 .container-cards {
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   padding: 2rem;
   margin: 5rem auto;
 }
@@ -232,7 +232,7 @@
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 60px;
+  gap: 35px;
 }
 
 .card-adm {
@@ -244,7 +244,7 @@
   text-decoration: none;
   color: #333;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 125%;
+  height: auto;
 }
 
 .card-adm:hover {

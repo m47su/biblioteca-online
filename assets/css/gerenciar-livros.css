@@ -1,0 +1,124 @@
+/* Estilos para a página de Gerenciar Livros */
+.publicar-container {
+  padding: 20px 5%;
+  min-height: calc(100vh - 280px);
+}
+.table-container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+.book-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.book-table th,
+.book-table td {
+  padding: 18px 20px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  vertical-align: middle;
+  display: table-cell;
+}
+.book-table th {
+  background-color: #2f3559;
+  color: #fff;
+  font-weight: 700;
+}
+.book-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+.book-cover {
+  width: 60px;
+  height: auto;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.action-buttons a,
+.action-buttons button {
+  background-color: #ffffff;
+  color: #2f3559;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.action-buttons a:hover,
+.action-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #0056b3;
+}
+
+.search-table-container {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+#table-search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#table-search-input:focus {
+  outline: none;
+  border-color: #2f3559;
+  box-shadow: 0 0 5px rgba(47, 53, 89, 0.5);
+}
+.swal2-cancel-button-custom {
+  background-color: #ce2525 !important;
+  color: white !important;
+  border: 1px solid #ddd !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15) !important;
+  margin-left: 10px !important;
+  padding: 8px 12px !important; /* Para garantir o mesmo padding */
+  border-radius: 10px !important; /* Para garantir o mesmo border-radius */
+  font-size: 16px !important; /* Para garantir o mesmo font-size */
+  transition: all 0.2s ease-in-out !important; /* Transição para o hover */
+}
+
+.swal2-cancel-button-custom:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+.swal2-confirm {
+  background-color: #2f3559 !important;
+  color: white !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.2s ease-in-out !important;
+  padding: 8px 12px !important; /* Para garantir o mesmo padding */
+  border-radius: 10px !important; /* Para garantir o mesmo border-radius */
+  font-size: 16px !important; /* Para garantir o mesmo font-size */
+}
+
+.swal2-confirm:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+.swal2-popup {
+  height: auto !important;
+}

@@ -213,7 +213,7 @@ section {
   padding: 0 5rem;
 }
 .home-img img {
-  width: 450px;
+  width: 215rem;
   height: auto;
   transition: transform 0.4s ease-in-out;
 }
@@ -427,6 +427,28 @@ section {
   font-weight: bold;
   font-size: 1.6rem;
   margin-left: 2px;
+}
+/*EDITAR LIVRO*/
+.cover-upload-box img {
+  border-radius: 20px;
+  max-width: 100%;
+}
+
+.btn-editar {
+  width: 50%;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: var(--brand, #2f3559);
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-editar:hover {
+  background-color: var(--brand-d, #1e223b);
 }
 
 /* EM ALTA */
@@ -1564,7 +1586,7 @@ img {
 }
 .form-layout-grid {
   display: grid;
-  grid-template-columns: 1fr 2fr; 
+  grid-template-columns: 1fr 2fr;
   gap: 4rem;
 }
 
@@ -1608,13 +1630,13 @@ img {
   display: grid;
   justify-content: center;
   padding-top: 5rem;
-  color: #2F355966;
+  color: #2f355966;
 }
 
 .cover-upload-box span {
   font-size: 1.4rem;
   font-weight: 500;
-  color: #2F3559;
+  color: #2f3559;
 }
 
 .form-fields {
@@ -1657,7 +1679,7 @@ img {
   border: 1px solid #dcdce2;
   border-radius: 8px;
   background-color: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #333;
 }
 
@@ -1721,7 +1743,7 @@ img {
 }
 @media (max-width: 768px) {
   .form-layout-grid {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
 
   .cover-upload-box {
