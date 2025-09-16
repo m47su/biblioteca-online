@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="assets/img/logo.png" type="image/png" />
-    <title>Perfil | Biblioteca Online</title>
+    <title>Perfil Administrador | Biblioteca Online</title>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&family=Nunito:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/perfil.css" />
   </head>
@@ -44,7 +45,7 @@
 
     <main class="wrap">
       <div class="page-title">
-        <h1>Perfil</h1>
+        <h1>Perfil Administrador</h1>
         <p>Veja os detalhes do seu perfil aqui</p>
       </div>
 
@@ -206,6 +207,39 @@
       </div>
     </div>
 
+<section class="container-cards">
+        <div class="cards-grid">
+            <a href="gerenciar-usuarios.html" class="card-adm">
+                <div class="card-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h3>Gerenciar Usuários</h3>
+            </a>
+            
+            <a href="publicar-livro.html" class="card-adm">
+                <div class="card-icon">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <h3>Publicar Livros</h3>
+            </a>
+
+            <a href="editar-livro.html" class="card-adm">
+                <div class="card-icon">
+                    <i class="fa-solid fa-pencil"></i>
+                </div>
+                <h3>Editar Livros</h3>
+            </a>
+
+            <a href="excluir-livro.html" class="card-adm">
+                <div class="card-icon">
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+                <h3>Excluir Livros</h3>
+            </a>
+        </div>
+    </section>
+
+
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-about">
@@ -232,6 +266,7 @@
           </ul>
         </div>
       </div>
+
       <div class="copyright-container">
         <p class="copyright">
           Copyright © 2024 Todos os direitos Reservados - Biblioteca Online
