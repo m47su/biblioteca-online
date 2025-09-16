@@ -1710,6 +1710,29 @@ img {
   background-color: var(--brand-d, #1e223b);
 }
 
+/*EDITAR LIVRO*/
+.cover-upload-box img {
+  border-radius: 20px;
+  max-width: 100%;
+}
+
+.btn-editar {
+  width: 50%;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: var(--brand, #2f3559);
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-editar:hover {
+  background-color: var(--brand-d, #1e223b);
+}
+
 /*Responsividade*/
 @media (max-width: 920px) {
   .grid-top {
