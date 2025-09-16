@@ -4,33 +4,40 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="assets/img/logo.png" type="image/png" />
-    <title>Usuários | Biblioteca Online</title>
+    <title>Gerenciar Usuários | Biblioteca Online</title>
+
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&family=Nunito:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/usuarios.css" />
   </head>
+
   <body>
     <header class="header">
-      <a href="perfil-adm.html" class="logo" id="header-avatar">
-        <img src="assets/img/user.png" alt="Avatar" class="img-logo" />
+      <a href="perfil.html" class="logo" id="header-avatar" title="Meu perfil">
+        <i
+          class="bx bx-user-circle"
+          style="font-size: 50px; color: #2f3559"
+        ></i>
       </a>
       <i class="bx bx-menu" id="menu-icon"></i>
       <nav class="navbar">
-        <a href="home.html"><i class="bx bx-home"></i></a>
-        <a href="favoritos.html"><i class="bx bx-heart"></i></a>
-        <a href="publicar.html"><i class="bx bx-plus"></i></a>
+        <a href="home.html" title="Início"><i class="bx bx-home"></i></a>
+        <a href="favoritos.html" title="Favoritos"
+          ><i class="bx bx-heart"></i
+        ></a>
       </nav>
       <div class="search-container">
         <input
           type="text"
-          placeholder="Buscar por título..."
+          placeholder="Buscar por usuário..."
           class="search-input"
         />
         <button class="search-btn" aria-label="Buscar">
@@ -40,13 +47,27 @@
     </header>
 
     <main class="admin-users">
-      <div class="page-title">
-        <a href="perfil-adm.html" class="back-link" aria-label="Voltar">
-          <i class="bx bx-left-arrow-alt"></i>
-        </a>
-        <div>
+      <div class="container-1120">
+        <div class="page-header-publicar">
+          <a href="perfil-adm.html" class="back-arrow" title="Voltar">
+            <i class="bx bx-arrow-back"></i>
+          </a>
           <h1>Usuários</h1>
-          <p>Gerencie os usuários da plataforma</p>
+        </div>
+
+        <div class="actions">
+          <button class="btn add-user-btn" data-open="criar-usuario">
+            Adicionar Usuário
+          </button>
+          <button class="btn export-users-btn">Exportar Usuários</button>
+        </div>
+
+        <div class="search-table-container">
+          <input
+            id="user-search-input"
+            type="text"
+            placeholder="Pesquisar por usuário..."
+          />
         </div>
       </div>
 
@@ -59,15 +80,25 @@
             <span class="name">Ana Silva</span>
             <span class="email">ana.silva@example.com</span>
           </div>
-          <a
-            href="#"
-            class="edit-btn"
-            data-open="editar-usuario"
-            data-user-id="1"
-            aria-label="Editar usuário"
-          >
-            <i class="bx bx-edit"></i>
-          </a>
+          <div class="actions-card">
+            <a
+              href="#"
+              class="edit-btn"
+              data-open="editar-usuario"
+              data-user-id="1"
+              aria-label="Editar usuário"
+            >
+              <i class="bx bx-edit"></i>
+            </a>
+            <button
+              type="button"
+              class="delete-btn-card"
+              data-user-id="1"
+              aria-label="Apagar usuário"
+            >
+              <i class="bx bx-trash"></i>
+            </button>
+          </div>
         </article>
 
         <article class="user-card" data-user-id="2">
@@ -78,15 +109,25 @@
             <span class="name">Bruno Melo</span>
             <span class="email">bruno.melo@example.com</span>
           </div>
-          <a
-            href="#"
-            class="edit-btn"
-            data-open="editar-usuario"
-            data-user-id="2"
-            aria-label="Editar usuário"
-          >
-            <i class="bx bx-edit"></i>
-          </a>
+          <div class="actions-card">
+            <a
+              href="#"
+              class="edit-btn"
+              data-open="editar-usuario"
+              data-user-id="2"
+              aria-label="Editar usuário"
+            >
+              <i class="bx bx-edit"></i>
+            </a>
+            <button
+              type="button"
+              class="delete-btn-card"
+              data-user-id="2"
+              aria-label="Apagar usuário"
+            >
+              <i class="bx bx-trash"></i>
+            </button>
+          </div>
         </article>
 
         <article class="user-card" data-user-id="3">
@@ -97,18 +138,75 @@
             <span class="name">Carla Souza</span>
             <span class="email">carla.souza@example.com</span>
           </div>
-          <a
-            href="#"
-            class="edit-btn"
-            data-open="editar-usuario"
-            data-user-id="3"
-            aria-label="Editar usuário"
-          >
-            <i class="bx bx-edit"></i>
-          </a>
+          <div class="actions-card">
+            <a
+              href="#"
+              class="edit-btn"
+              data-open="editar-usuario"
+              data-user-id="3"
+              aria-label="Editar usuário"
+            >
+              <i class="bx bx-edit"></i>
+            </a>
+            <button
+              type="button"
+              class="delete-btn-card"
+              data-user-id="3"
+              aria-label="Apagar usuário"
+            >
+              <i class="bx bx-trash"></i>
+            </button>
+          </div>
         </article>
       </section>
     </main>
+
+    <div class="popup-overlay" id="criar-usuario">
+      <div
+        class="popup-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="titulo-criar-usuario"
+      >
+        <button
+          class="close-btn"
+          type="button"
+          data-close="criar-usuario"
+          aria-label="Fechar"
+        >
+          &times;
+        </button>
+        <h2 id="titulo-criar-usuario">Adicionar usuário</h2>
+        <form id="form-criar-usuario">
+          <div class="form-group">
+            <label for="novo-nome">Nome</label>
+            <input
+              type="text"
+              id="novo-nome"
+              name="nome"
+              placeholder="Digite o nome"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="novo-email">E-mail</label>
+            <input
+              type="email"
+              id="novo-email"
+              name="email"
+              placeholder="Digite o e-mail"
+              required
+            />
+          </div>
+          <p class="info-text">
+            A senha será gerada e enviada por e-mail ao usuário após o cadastro.
+          </p>
+          <div class="modal-actions">
+            <button type="submit" class="btn" id="createUserBtn">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <div class="popup-overlay" id="editar-usuario">
       <div
@@ -146,15 +244,6 @@
               name="email"
               placeholder="Digite o e-mail"
               required
-            />
-          </div>
-          <div class="form-group">
-            <label for="user-senha">Nova senha</label>
-            <input
-              type="password"
-              id="user-senha"
-              name="senha"
-              placeholder="Digite a nova senha"
             />
           </div>
           <div class="form-group">
@@ -199,12 +288,13 @@
       </div>
       <div class="copyright-container">
         <p class="copyright">
-          Copyright © 2024 Todos os direitos Reservados - Biblioteca Online
+          Copyright © 2025 Todos os direitos Reservados - Biblioteca Online
         </p>
       </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="./assets/js/script.js"></script>
     <script src="./assets/js/usuarios.js"></script>
   </body>
 </html>

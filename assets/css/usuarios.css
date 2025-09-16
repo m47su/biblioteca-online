@@ -1,127 +1,169 @@
-:root {
-  --ink: #2f3559;
-  --muted: #6b6b75;
-  --card: #ffffff;
-  --radius: 16px;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-  --line: #eee;
-  --brand: #2f3559;
-  --brand-d: #1e223b;
-}
-
-/* ===== Container da página de usuários ===== */
+/* Página Usuarios */
 .admin-users {
-  max-width: 1100px;
-  margin: 8rem auto 4rem;
-  padding: 0 2rem;
+  padding: 90px 5% 40px;
+  min-height: calc(100vh - 280px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1120px) minmax(0, 1fr);
+  column-gap: 0;
 }
 
-.admin-users .page-title {
+.admin-users .container-1120 {
+  width: 100%;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-header-publicar {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  margin: 0 0 2.4rem;
-  color: var(--ink);
+  gap: 12px;
+  margin: 0 0 12px;
+  color: #2f3559;
 }
-.admin-users .page-title i {
-  font-size: 2rem;
-  color: var(--ink);
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-.admin-users .page-title i:hover {
-  color: var(--brand-d);
-}
-.admin-users .page-title h1 {
+
+.page-header-publicar h1 {
   font-family: "Playfair Display", serif;
-  font-size: 3.2rem;
+  font-weight: 700;
+  font-size: 40px;
   line-height: 1.2;
   margin: 0;
-}
-.admin-users .page-title p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 1.4rem;
+  color: #2f3559;
 }
 
-/* ===== Lista de usuários ===== */
-.user-list {
-  display: grid;
-  gap: 2rem;
+.back-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 100px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #2f3559;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+.back-arrow i {
+  font-size: 38px;
 }
 
-.user-card {
-  position: relative;
+.admin-users .actions .btn:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.admin-users .actions .add-user-btn {
+  background: #e25879;
+  color: #fff;
+  border-color: #e84e67;
+}
+
+.admin-users .search-table-container {
+  margin: 10px 0 26px;
+}
+
+.admin-users #user-search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.admin-users #user-search-input:focus {
+  outline: none;
+  border-color: #2f3559;
+  box-shadow: 0 0 5px rgba(47, 53, 89, 0.5);
+}
+
+.admin-users .user-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  padding: 0 !important;
+}
+
+.admin-users .user-card {
+  width: 100%;
   display: flex;
   align-items: center;
-  gap: 1.6rem;
-
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-
-  padding: 1.6rem;
+  gap: 18px;
+  background: #fff;
+  border: 1px solid #e9e9ee;
+  border-radius: 12px;
+  padding: 18px 22px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
-.user-card .avatar {
+.admin-users .user-card .avatar {
   width: 56px;
   height: 56px;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
-  border: 3px solid #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  background: #3d487b;
+  border: 4px solid #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
 }
-.user-card .avatar img {
+.admin-users .user-card .avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  display: block;
 }
 
-.user-card .meta {
+.admin-users .user-card .meta {
   display: flex;
   flex-direction: column;
 }
-.user-card .name {
+.admin-users .user-card .name {
+  font-size: 18px;
   font-weight: 700;
-  color: var(--ink);
-  font-size: 1.6rem;
+  color: #2f3559;
   line-height: 1.2;
 }
-.user-card .email {
-  color: var(--muted);
-  font-size: 1.3rem;
+.admin-users .user-card .email {
+  font-size: 14px;
+  color: #6b6b75;
+  margin-top: 2px;
 }
 
-.user-card .edit-btn {
+.admin-users .actions-card {
   margin-left: auto;
-  width: 36px;
-  height: 36px;
-
-  display: grid;
-  place-items: center;
-
-  border-radius: 999px;
-  background: #f3f4f8;
-  border: 1px solid #ececf1;
-  color: var(--ink);
-  text-decoration: none;
-  transition: all 0.3s ease;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
-.user-card .edit-btn i {
-  font-size: 1.6rem;
-  line-height: 1;
+.admin-users .actions-card > * {
+  background: #ffffff;
+  color: #2f3559;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  font-size: 18px;
+  transition: all 0.2s ease-in-out;
+  padding: 0;
 }
-.user-card .edit-btn:hover {
-  color: var(--brand-d);
-  background: #e2e3f0;
+.admin-users .actions-card > *:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #0056b3;
+}
+.admin-users .actions-card i {
+  line-height: 1;
+  pointer-events: none;
 }
 
-/* ===== Modal editar usuário ===== */
+#criar-usuario,
 #editar-usuario {
   position: fixed;
   inset: 0;
@@ -131,116 +173,209 @@
   align-items: center;
   z-index: 1000;
 }
-
+#criar-usuario.active,
 #editar-usuario.active {
   display: flex;
 }
-
+#criar-usuario .popup-content,
 #editar-usuario .popup-content {
   position: relative;
   background: #fff;
   border-radius: 12px;
-  padding: 2rem;
-  max-width: 450px;
+  padding: 22px;
   width: 100%;
+  max-width: 520px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  animation: fadeIn 0.3s ease;
 }
-
+#criar-usuario h2,
 #editar-usuario h2 {
-  margin: 0 0 1.6rem;
+  margin: 0 0 16px;
   font-family: "Playfair Display", serif;
-  font-size: 2rem;
-  color: var(--ink);
+  font-size: 24px;
+  color: #2f3559;
 }
-
+#criar-usuario .close-btn,
 #editar-usuario .close-btn {
   position: absolute;
-  top: 12px;
-  right: 16px;
-  font-size: 2rem;
+  top: 10px;
+  right: 14px;
+  font-size: 28px;
   background: none;
   border: none;
-  color: var(--muted);
+  color: #6b6b75;
   cursor: pointer;
-  transition: color 0.3s ease;
 }
-#editar-usuario .close-btn:hover {
-  color: var(--brand-d);
-}
-
+#criar-usuario .form-group,
 #editar-usuario .form-group {
-  margin-bottom: 1.4rem;
+  margin-bottom: 14px;
 }
-
+#criar-usuario label,
 #editar-usuario label {
   display: block;
-  font-weight: 600;
-  font-size: 1.3rem;
-  color: var(--ink);
-  margin-bottom: 0.4rem;
+  font-weight: 700;
+  font-size: 14px;
+  color: #2f3559;
+  margin-bottom: 6px;
 }
-
+#criar-usuario input[type="text"],
+#criar-usuario input[type="email"],
 #editar-usuario input[type="text"],
 #editar-usuario input[type="email"],
-#editar-usuario input[type="password"],
 #editar-usuario input[type="file"] {
   width: 100%;
-  padding: 0.8rem 1rem;
+  padding: 10px 12px;
   border: 1px solid #dcdce2;
   border-radius: 8px;
-  font-size: 1.4rem;
-  outline: none;
-  transition: border 0.2s;
+  font-size: 15px;
 }
-
+#criar-usuario input:focus,
 #editar-usuario input:focus {
-  border-color: var(--brand);
+  outline: none;
+  border-color: #2f3559;
+  box-shadow: 0 0 5px rgba(47, 53, 89, 0.5);
 }
-
-/* Botões do modal */
-#editar-usuario .row-actions {
+#criar-usuario .modal-actions,
+#editar-usuario .modal-actions {
   display: flex;
   justify-content: flex-end;
-  gap: 1rem;
-  margin-top: 1.6rem;
+  gap: 12px;
+  margin-top: 12px;
 }
-
+#criar-usuario .btn,
 #editar-usuario .btn {
-  border: none;
-  padding: 0.8rem 1.6rem;
-  border-radius: 999px;
-  font-size: 1.4rem;
+  background: #2f3559;
+  color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 16px;
   font-weight: 700;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
+  transition: all 0.2s ease-in-out;
 }
-
-#editar-usuario .btn.save {
-  background: var(--brand);
-  color: #fff;
+#criar-usuario .btn:hover,
+#editar-usuario .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-#editar-usuario .btn.save:hover {
-  background: var(--brand-d);
-  transform: translateY(-2px);
-}
-
-#editar-usuario .btn.delete {
+#editar-usuario .btn.danger {
   background: #d94a4a;
   color: #fff;
-}
-#editar-usuario .btn.delete:hover {
-  background: #c43737;
-  transform: translateY(-2px);
+  border-color: #d94a4a;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
+.admin-users .info-text {
+  margin: 0.4rem 0 1rem;
+  color: #6b6b75;
+  font-size: 14px;
+}
+
+.admin-users .empty-state {
+  text-align: center;
+  color: #6b6b75;
+  padding: 24px;
+  border: 1px dashed #e9e9ee;
+  border-radius: 12px;
+  background: #fff;
+}
+
+@media (max-width: 640px) {
+  .page-header-publicar h1 {
+    font-size: 32px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .back-arrow {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
   }
+  .admin-users .actions .btn {
+    font-size: 15px;
+    padding: 9px 14px;
+  }
+}
+
+.admin-users .page-header-publicar,
+.admin-users .page-title,
+.admin-users .actions,
+.admin-users .search-table-container,
+.admin-users .sub-header,
+.admin-users .user-list {
+  grid-column: 2;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100%;
+}
+
+.admin-users > .container-1120 {
+  grid-column: 2;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0;
+}
+
+.admin-users > .user-list {
+  grid-column: 2;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 0 40px 0;
+}
+
+.admin-users .page-title,
+.admin-users .actions,
+.admin-users .search-table-container,
+.admin-users .sub-header {
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: auto !important;
+}
+
+.swal-actions-gap {
+  gap: 12px !important;
+}
+
+.swal-btn {
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 44px !important;
+  min-width: 160px !important;
+  padding: 0 18px !important;
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  line-height: 1 !important;
+  border: 1px solid transparent !important;
+  cursor: pointer !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+.swal-btn:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+}
+.swal-btn--danger {
+  background: #d94a4a !important;
+  color: #fff !important;
+  border-color: #d94a4a !important;
+}
+.swal-btn--primary {
+  background: #2f3559 !important;
+  color: #fff !important;
+  border-color: #2f3559 !important;
+}
+.swal2-styled {
+  background: initial !important;
+  border: none !important;
+  color: inherit !important;
+}
+.swal2-popup .swal2-actions .swal2-confirm.swal2-styled:not(.swal-btn) {
+  background: #2f3559 !important;
+  color: #fff !important;
+  border-radius: 12px !important;
+  padding: 10px 18px !important;
+  font-weight: 700 !important;
+  border: 1px solid #2f3559 !important;
 }
