@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/png" />
+    <title>Usuários | Biblioteca Online</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&family=Nunito:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/usuarios.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="perfil-adm.html" class="logo" id="header-avatar">
+        <img src="assets/img/user.png" alt="Avatar" class="img-logo" />
+      </a>
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="home.html"><i class="bx bx-home"></i></a>
+        <a href="favoritos.html"><i class="bx bx-heart"></i></a>
+        <a href="publicar.html"><i class="bx bx-plus"></i></a>
+      </nav>
+      <div class="search-container">
+        <input
+          type="text"
+          placeholder="Buscar por título..."
+          class="search-input"
+        />
+        <button class="search-btn" aria-label="Buscar">
+          <i class="bx bx-search"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="admin-users">
+      <div class="page-title">
+        <a href="perfil-adm.html" class="back-link" aria-label="Voltar">
+          <i class="bx bx-left-arrow-alt"></i>
+        </a>
+        <div>
+          <h1>Usuários</h1>
+          <p>Gerencie os usuários da plataforma</p>
+        </div>
+      </div>
+
+      <section class="user-list">
+        <article class="user-card" data-user-id="1">
+          <div class="avatar">
+            <img src="assets/img/user.png" alt="Avatar de Ana Silva" />
+          </div>
+          <div class="meta">
+            <span class="name">Ana Silva</span>
+            <span class="email">ana.silva@example.com</span>
+          </div>
+          <a
+            href="#"
+            class="edit-btn"
+            data-open="editar-usuario"
+            data-user-id="1"
+            aria-label="Editar usuário"
+          >
+            <i class="bx bx-edit"></i>
+          </a>
+        </article>
+
+        <article class="user-card" data-user-id="2">
+          <div class="avatar">
+            <img src="assets/img/user.png" alt="Avatar de Bruno Melo" />
+          </div>
+          <div class="meta">
+            <span class="name">Bruno Melo</span>
+            <span class="email">bruno.melo@example.com</span>
+          </div>
+          <a
+            href="#"
+            class="edit-btn"
+            data-open="editar-usuario"
+            data-user-id="2"
+            aria-label="Editar usuário"
+          >
+            <i class="bx bx-edit"></i>
+          </a>
+        </article>
+
+        <article class="user-card" data-user-id="3">
+          <div class="avatar">
+            <img src="assets/img/user.png" alt="Avatar de Carla Souza" />
+          </div>
+          <div class="meta">
+            <span class="name">Carla Souza</span>
+            <span class="email">carla.souza@example.com</span>
+          </div>
+          <a
+            href="#"
+            class="edit-btn"
+            data-open="editar-usuario"
+            data-user-id="3"
+            aria-label="Editar usuário"
+          >
+            <i class="bx bx-edit"></i>
+          </a>
+        </article>
+      </section>
+    </main>
+
+    <div class="popup-overlay" id="editar-usuario">
+      <div
+        class="popup-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="titulo-editar-usuario"
+      >
+        <button
+          class="close-btn"
+          type="button"
+          data-close="editar-usuario"
+          aria-label="Fechar"
+        >
+          &times;
+        </button>
+        <h2 id="titulo-editar-usuario">Editar usuário</h2>
+        <form id="form-editar-usuario">
+          <input type="hidden" id="user-id" name="id" />
+          <div class="form-group">
+            <label for="user-nome">Nome</label>
+            <input
+              type="text"
+              id="user-nome"
+              name="nome"
+              placeholder="Digite o nome"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="user-email">E-mail</label>
+            <input
+              type="email"
+              id="user-email"
+              name="email"
+              placeholder="Digite o e-mail"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="user-senha">Nova senha</label>
+            <input
+              type="password"
+              id="user-senha"
+              name="senha"
+              placeholder="Digite a nova senha"
+            />
+          </div>
+          <div class="form-group">
+            <label for="user-foto">Foto</label>
+            <input type="file" id="user-foto" accept="image/*" />
+          </div>
+          <div class="modal-actions">
+            <button type="submit" class="btn" id="saveUserBtn">Salvar</button>
+            <button type="button" class="btn danger" id="deleteUserBtn">
+              Apagar usuário
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-about">
+          <h2>Sobre</h2>
+          <p>
+            Biblioteca online é uma plataforma digital que oferece acesso
+            gratuito a uma vasta coleção de livros em diversos gêneros e
+            formatos. Nosso objetivo é promover a leitura e o compartilhamento
+            de conhecimento.
+          </p>
+          <img
+            src="assets/img/logohome.png"
+            alt="Logo Biblioteca"
+            class="footer-logo"
+          />
+        </div>
+        <div class="footer-contacts">
+          <h2>Contatos</h2>
+          <ul>
+            <li><i class="bx bx-envelope"></i> elivrosonline@gmail.com</li>
+            <li><i class="bx bxl-instagram"></i> bibliotecaonline.proj</li>
+            <li><i class="bx bxl-linkedin"></i> Projeto Biblioteca Online</li>
+            <li><i class="bx bxl-github"></i> BibliotecaOnline</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright-container">
+        <p class="copyright">
+          Copyright © 2024 Todos os direitos Reservados - Biblioteca Online
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/usuarios.js"></script>
+  </body>
+</html>

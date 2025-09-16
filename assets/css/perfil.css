@@ -223,10 +223,10 @@
 /*CARDS ADM*/
 
 .container-cards {
-  width: 100%; 
-  max-width: 800px; 
+  width: 100%;
+  max-width: 800px;
   padding: 2rem;
-  margin: 5rem auto; 
+  margin: 5rem auto;
 }
 
 .cards-grid {
@@ -236,8 +236,8 @@
 }
 
 .card-adm {
-  background-color: #ffffff; 
-  border-radius: 10px; 
+  background-color: #ffffff;
+  border-radius: 10px;
   padding: 30px 20px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -253,7 +253,7 @@
 }
 
 .card-icon {
-  font-size: 42px; 
+  font-size: 42px;
   margin-bottom: 15px;
   color: var(--brand);
 }
@@ -261,10 +261,8 @@
 .card-adm h3 {
   margin: 0;
   font-size: 2rem;
-  color:(var(--brand));
+  color: (var(--brand));
 }
-
-
 
 /* ===== Responsividade ===== */
 @media (max-width: 920px) {
@@ -287,4 +285,41 @@
   .profile-card {
     grid-template-columns: 72px 1fr;
   }
+}
+/* Modal: Editar detalhes */
+#editar-detalhes .popup-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+#editar-detalhes .form-group {
+  margin-bottom: 1.2rem;
+}
+
+#editar-detalhes label {
+  display: block;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+
+#editar-detalhes .form-group input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #dcdce2; /* <- a borda que faltava */
+  border-radius: 10px;
+  padding: 0 12px;
+  font-size: 1.4rem;
+  color: #111;
+  background: #fff;
+  outline: none;
+}
+
+#editar-detalhes .form-group input:focus {
+  border-color: var(--brand);
 }
