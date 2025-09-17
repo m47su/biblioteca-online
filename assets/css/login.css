@@ -65,7 +65,7 @@ body {
   transform: translateX(-50%);
   height: 0.8rem;
   width: 7rem;
-  background: #FCD53F;
+  background: #fcd53f;
   border-radius: 1rem;
   clip-path: polygon(0 0, 0% 100%, 100% 0);
 }
@@ -135,7 +135,7 @@ form {
 }
 
 .forgot-pass a:hover {
-  color: #FCD53F;
+  color: #fcd53f;
 }
 
 .button-area {
@@ -155,7 +155,7 @@ button {
   cursor: pointer;
   border: 2px solid transparent;
   border-radius: 2rem;
-  background: #2F3559;
+  background: #2f3559;
   transition: all 0.3s ease;
 }
 
@@ -186,7 +186,7 @@ button:hover {
 }
 
 .form-toggle-area p span:hover {
-  color: #FCD53F;
+  color: #fcd53f;
 }
 
 @media screen and (max-width: 360px) {
@@ -215,4 +215,3 @@ button:hover {
     font-size: 0.9rem;
   }
 }
-

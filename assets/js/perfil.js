@@ -1,4 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const COLOR_PRIMARY = "#2f3559"; // azul
+  const COLOR_DANGER = "#d94a4a"; // vermelho
+
+  const swalOK = (opts = {}) =>
+    Swal.fire({
+      buttonsStyling: true,
+      confirmButtonText: "OK",
+      confirmButtonColor: COLOR_PRIMARY,
+      ...opts,
+    });
+
+  // confirmar exclusão
+  const swalConfirmDelete = (opts = {}) =>
+    Swal.fire({
+      icon: "warning",
+      showCancelButton: true,
+      reverseButtons: true,
+      confirmButtonText: "Sim, deletar!",
+      cancelButtonText: "Cancelar",
+      confirmButtonColor: COLOR_DANGER, // vermelho
+      cancelButtonColor: COLOR_PRIMARY, // azul
+      buttonsStyling: true,
+      ...opts,
+    });
+
+  // Mostrar/ocultar senha
   document.querySelectorAll(".toggle").forEach((btn) => {
     btn.addEventListener("click", () => {
       const id = btn.getAttribute("data-target");
@@ -11,17 +37,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  //Alterar senha
   const senhaAtual = document.getElementById("senha-atual");
   const novaSenha = document.getElementById("nova-senha");
   const confirma = document.getElementById("confirma-senha");
   const atualizarBtn = document.querySelector(".section:not(.danger) .btn");
 
   if (atualizarBtn) {
-    atualizarBtn.addEventListener("click", (e) => {
+    atualizarBtn.addEventListener("click", async (e) => {
       e.preventDefault();
 
       if (!senhaAtual.value || !novaSenha.value || !confirma.value) {
-        Swal.fire({
+        await swalOK({
           icon: "warning",
           title: "Preencha todos os campos",
           text: "Para alterar a senha, complete os três campos.",
@@ -30,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (novaSenha.value !== confirma.value) {
-        Swal.fire({
+        await swalOK({
           icon: "error",
           title: "As senhas não coincidem",
           text: "Verifique a confirmação da nova senha.",
@@ -38,27 +65,27 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      Swal.fire({
+      await swalOK({
         icon: "success",
         title: "Senha atualizada!",
         text: "Sua senha foi alterada com sucesso.",
-      }).then(() => {
-        senhaAtual.value = "";
-        novaSenha.value = "";
-        confirma.value = "";
       });
+
+      senhaAtual.value = "";
+      novaSenha.value = "";
+      confirma.value = "";
     });
   }
 
-  // Apagar conta
+  //Apagar conta
   const chk = document.getElementById("confirmar-exclusao");
   const apagarBtn = document.getElementById("apagar-btn");
 
   if (chk && apagarBtn) {
     apagarBtn.disabled = false;
-    apagarBtn.addEventListener("click", () => {
+    apagarBtn.addEventListener("click", async () => {
       if (!chk.checked) {
-        Swal.fire({
+        await swalOK({
           icon: "warning",
           title: "Confirmação necessária",
           text: "Marque a opção 'Desejo apagar minha conta e todos meus dados' para continuar.",
@@ -66,29 +93,19 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      Swal.fire({
+      const { isConfirmed } = await swalConfirmDelete({
         title: "Tem certeza?",
         text: "Essa ação não poderá ser revertida!",
-        icon: "warning",
-        showCancelButton: true,
-        reverseButtons: true,
-        confirmButtonColor: "#2f3559",
-        cancelButtonColor: "#d94a4a",
-        confirmButtonText: "Sim, apagar conta!",
-        cancelButtonText: "Cancelar",
-      }).then((result) => {
-        if (result.isConfirmed) {
-          Swal.fire({
-            title: "Apagada!",
-            text: "Sua conta foi excluída com sucesso.",
-            icon: "success",
-            confirmButtonColor: "#2f3559",
-            confirmButtonText: "OK",
-          }).then(() => {
-            window.location.href = "home.html";
-          });
-        }
       });
+
+      if (isConfirmed) {
+        await swalOK({
+          icon: "success",
+          title: "Apagada!",
+          text: "Sua conta foi excluída com sucesso.",
+        });
+        window.location.href = "home.html";
+      }
     });
   }
 
@@ -108,17 +125,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Salvar edição de nome e e-mail
   const formEditar = document.getElementById("form-editar-detalhes");
   if (formEditar) {
-    formEditar.addEventListener("submit", (e) => {
+    formEditar.addEventListener("submit", async (e) => {
       e.preventDefault();
 
       const nome = document.getElementById("det-nome").value.trim();
       const email = document.getElementById("det-email").value.trim();
 
       if (!nome || !email) {
-        Swal.fire({
+        await swalOK({
           icon: "warning",
           title: "Preencha todos os campos",
           text: "Digite nome e e-mail válidos.",
@@ -126,25 +142,25 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      Swal.fire({
+      await swalOK({
         icon: "success",
         title: "Informações atualizadas!",
         text: "Seus dados foram salvos com sucesso.",
-      }).then(() => {
-        const nomeField = document.querySelector(
-          ".details .field:nth-child(1) div"
-        );
-        const emailField = document.querySelector(
-          ".details .field:nth-child(2) div"
-        );
-        if (nomeField) nomeField.textContent = nome;
-        if (emailField) emailField.textContent = email;
-
-        const popup = document.getElementById("editar-detalhes");
-        if (popup) popup.classList.remove("active");
-
-        formEditar.reset();
       });
+
+      const nomeField = document.querySelector(
+        ".details .field:nth-child(1) div"
+      );
+      const emailField = document.querySelector(
+        ".details .field:nth-child(2) div"
+      );
+      if (nomeField) nomeField.textContent = nome;
+      if (emailField) emailField.textContent = email;
+
+      const popup = document.getElementById("editar-detalhes");
+      if (popup) popup.classList.remove("active");
+
+      formEditar.reset();
     });
   }
 
@@ -167,11 +183,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!file) return;
 
       const reader = new FileReader();
-      reader.onload = (e) => {
+      reader.onload = async (e) => {
         const src = e.target.result;
         setAvatar(src);
 
-        Swal.fire({
+        await swalOK({
           icon: "success",
           title: "Foto atualizada!",
           text: "Sua imagem de perfil foi alterada com sucesso.",

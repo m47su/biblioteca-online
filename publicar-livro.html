@@ -21,106 +21,138 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
   </head>
-   <header class="header">
-      <a href="perfil.html" class="logo" id="header-avatar">
-        <i
-          class="bx bx-user-circle"
-          style="font-size: 50px; color: #2f3559"
-        ></i>
-      </a>
-      <i class="bx bx-menu" id="menu-icon"></i>
-      <nav class="navbar">
-        <a href="home.html"><i class="bx bx-home"></i></a>
-        <a href="favoritos.html"><i class="bx bx-heart"></i></a>
-      </nav>
-      <div class="search-container">
-        <input
-          type="text"
-          placeholder="Buscar por título..."
-          class="search-input"
-        />
-        <button class="search-btn" aria-label="Buscar">
-          <i class="bx bx-search"></i>
-        </button>
-      </div>
-    </header>
+  <header class="header">
+    <a href="perfil.html" class="logo" id="header-avatar">
+      <i class="bx bx-user-circle" style="font-size: 50px; color: #2f3559"></i>
+    </a>
+    <i class="bx bx-menu" id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="home.html"><i class="bx bx-home"></i></a>
+      <a href="favoritos.html"><i class="bx bx-heart"></i></a>
+    </nav>
+    <div class="search-container">
+      <input
+        type="text"
+        placeholder="Buscar por título..."
+        class="search-input"
+      />
+      <button class="search-btn" aria-label="Buscar">
+        <i class="bx bx-search"></i>
+      </button>
+    </div>
+  </header>
 
   <body>
-  <main class="publicar-container">
-    <div class="page-header-publicar">
-      <a href="javascript:history.back()" class="back-arrow" title="Voltar">
+    <main class="publicar-container">
+      <div class="page-header-publicar">
+        <a href="perfil-adm.html" class="back-arrow" title="Voltar">
           <i class="bx bx-arrow-back"></i>
         </a>
-      <h1>Publicar livro</h1>
-    </div>
-
-    <form id="livro-form" class="form-layout-grid">
-      <div class="cover-upload-area">
-        <label for="capa-livro-input" class="cover-upload-box">
-          <i class="fa-regular fa-image"></i>
-          <span>Adicionar uma capa</span>
-        </label>
-        <input type="file" id="capa-livro-input" accept=".png" class="visually-hidden">
+        <h1>Publicar livro</h1>
       </div>
 
-      <div class="form-fields">
-        
-        <div class="form-section">
-          <h2>Detalhes do livro</h2>
-          <div class="form-group">
-            <label for="titulo">Título</label>
-            <input type="text" id="titulo" placeholder="Insira um título legal" required>
-          </div>
-          <div class="form-group">
-            <label for="sinopse">Sinopse</label>
-            <textarea id="sinopse" rows="5" placeholder="Faça um resumo do seu livro" required></textarea>
-          </div>
-          <div class="form-group-inline">
-            <div class="form-group">  
-              <label for="ano-publicacao">Ano de publicação</label>
-              <input type="number" id="ano-publicacao" placeholder="Ex: 2024" required>
+      <form id="livro-form" class="form-layout-grid">
+        <div class="cover-upload-area">
+          <label for="capa-livro-input" class="cover-upload-box">
+            <i class="fa-regular fa-image"></i>
+            <span>Adicionar uma capa</span>
+          </label>
+          <input
+            type="file"
+            id="capa-livro-input"
+            accept=".png"
+            class="visually-hidden"
+          />
+        </div>
+
+        <div class="form-fields">
+          <div class="form-section">
+            <h2>Detalhes do livro</h2>
+            <div class="form-group">
+              <label for="titulo">Título</label>
+              <input
+                type="text"
+                id="titulo"
+                placeholder="Insira um título legal"
+                required
+              />
             </div>
             <div class="form-group">
-              <label for="categoria">Categoria <span style="color: #d93025;">*</span></label>
-              <select id="categoria" required>
-                <option value="" disabled selected>Selecione uma categoria</option>
-                <option value="romance">Romance</option>
-                <option value="terror">Terror</option>
-                <option value="fantasia">Fantasia</option>
-                <option value="ficcao">Ficção Científica</option>
-              </select>
+              <label for="sinopse">Sinopse</label>
+              <textarea
+                id="sinopse"
+                rows="5"
+                placeholder="Faça um resumo do seu livro"
+                required
+              ></textarea>
+            </div>
+            <div class="form-group-inline">
+              <div class="form-group">
+                <label for="ano-publicacao">Ano de publicação</label>
+                <input
+                  type="number"
+                  id="ano-publicacao"
+                  placeholder="Ex: 2024"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="categoria"
+                  >Categoria <span style="color: #d93025">*</span></label
+                >
+                <select id="categoria" required>
+                  <option value="" disabled selected>
+                    Selecione uma categoria
+                  </option>
+                  <option value="romance">Romance</option>
+                  <option value="terror">Terror</option>
+                  <option value="fantasia">Fantasia</option>
+                  <option value="ficcao">Ficção Científica</option>
+                </select>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div class="form-section">
-          <h2>Informações do autor</h2>
-          <div class="form-group">
-            <label for="nome-autor">Nome do autor</label>
-            <input type="text" id="nome-autor" placeholder="Nome do autor" required>
-          </div>
-          <div class="form-group">
-            <label for="nome-autor">Foto do autor</label>
-            <input type="file" id="foto-autor" accept=".png">
-          </div>
-          <div class="form-group">
-            <label for="descricao-autor">Descrição do autor</label>
-            <textarea id="descricao-autor" rows="4" placeholder="Faça uma pequena biografia sobre o autor"></textarea>
-          </div>
-        </div>
 
-        <div class="form-section-footer">
-          <div class="form-group-checkbox">
-            <input type="checkbox" id="termo-ciencia" required>
-            <label for="termo-ciencia">Afirmo que esta obra é minha ou tenho permissão para usá-la e que ela não infrige nenhuma regra. <span style="color: #d93025;">*</span></label>
+          <div class="form-section">
+            <h2>Informações do autor</h2>
+            <div class="form-group">
+              <label for="nome-autor">Nome do autor</label>
+              <input
+                type="text"
+                id="nome-autor"
+                placeholder="Nome do autor"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="nome-autor">Foto do autor</label>
+              <input type="file" id="foto-autor" accept=".png" />
+            </div>
+            <div class="form-group">
+              <label for="descricao-autor">Descrição do autor</label>
+              <textarea
+                id="descricao-autor"
+                rows="4"
+                placeholder="Faça uma pequena biografia sobre o autor"
+              ></textarea>
+            </div>
           </div>
-          <button type="submit" class="btn-publicar">Publicar</button>
-        </div>
 
-      </div>
-    </form>
-  </main>
-      <footer class="footer">
+          <div class="form-section-footer">
+            <div class="form-group-checkbox">
+              <input type="checkbox" id="termo-ciencia" required />
+              <label for="termo-ciencia"
+                >Afirmo que esta obra é minha ou tenho permissão para usá-la e
+                que ela não infrige nenhuma regra.
+                <span style="color: #d93025">*</span></label
+              >
+            </div>
+            <button type="submit" class="btn-publicar">Publicar</button>
+          </div>
+        </div>
+      </form>
+    </main>
+    <footer class="footer">
       <div class="footer-content">
         <div class="footer-about">
           <h2>Sobre</h2>
@@ -152,6 +184,5 @@
         </p>
       </div>
     </footer>
-  
   </body>
 </html>

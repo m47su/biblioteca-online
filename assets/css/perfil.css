@@ -329,3 +329,32 @@
 #editar-detalhes .form-group input:focus {
   border-color: var(--brand);
 }
+/* Botões do SweetAlert: iguais, porém responsivos */
+.swal2-actions .swal2-styled {
+  box-sizing: border-box !important;
+  min-width: clamp(140px, 45%, 200px) !important; /* ↓ adapta ao espaço */
+  height: 44px !important;
+  padding: 0 18px !important;
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+}
+
+.swal2-actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin: 0 !important;
+}
+
+.swal2-popup {
+  padding-bottom: 28px !important;
+  max-width: 500px !important;
+}
+
+@media (min-width: 520px) {
+  .swal2-actions {
+    flex-wrap: nowrap !important;
+  }
+}

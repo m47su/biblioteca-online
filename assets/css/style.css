@@ -1779,8 +1779,8 @@ img {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: #fff; /* opcional, para deixar o círculo branco */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* opcional, sombra igual ao perfil */
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 #header-avatar i {
@@ -1788,7 +1788,7 @@ img {
   color: #2f3559;
   line-height: 1;
 }
-/* Avatar/ícone no header – padrão global */
+
 #header-avatar {
   display: flex;
   align-items: center;
@@ -1799,7 +1799,6 @@ img {
   color: #2f3559;
 }
 
-/* Quando houver foto no header, ela é sempre redonda */
 #header-avatar img,
 .img-logo {
   width: 50px;

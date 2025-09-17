@@ -95,14 +95,12 @@
   box-shadow: 0 0 5px rgba(47, 53, 89, 0.5);
 }
 
-/* ---------- SweetAlert2 (botões padronizados) ---------- */
-
 .swal2-popup {
   height: auto !important;
 }
 
 .swal2-actions {
-  gap: 12px !important; /* espaçamento entre os botões */
+  gap: 12px !important;
 }
 
 .swal-btn {
@@ -127,14 +125,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* confirmar (azul) */
 .swal-btn--primary {
   background: #2f3559 !important;
   color: #fff !important;
   border-color: #2f3559 !important;
 }
 
-/* cancelar (vermelho) */
 .swal-btn--danger {
   background: #ce2525 !important;
   color: #fff !important;

@@ -26,7 +26,6 @@ menuIcon.onclick = () => {
   navbar.classList.toggle("active");
 };
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const openPopupBtn = document.getElementById("open-popup-btn");
   const closePopupBtn = document.getElementById("close-popup-btn");
@@ -37,13 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
     popupOverlay.classList.add("active");
   };
 
-
   const closePopup = () => {
     popupOverlay.classList.remove("active");
   };
 
   openPopupBtn.addEventListener("click", (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
     openPopup();
   });
 
@@ -54,22 +52,20 @@ document.addEventListener("DOMContentLoaded", () => {
       closePopup();
     }
   });
-livroForm.addEventListener("submit", (event) => {
-  event.preventDefault(); 
+  livroForm.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-  closePopup(); 
+    closePopup();
 
-  livroForm.reset(); 
+    livroForm.reset();
 
-  Swal.fire({
-    title: "Enviado com sucesso!",
-    text: "Agradecemos sua contribuição. Nossa equipe irá avaliar.",
-    icon: "success"
+    Swal.fire({
+      title: "Enviado com sucesso!",
+      text: "Agradecemos sua contribuição. Nossa equipe irá avaliar.",
+      icon: "success",
+    });
   });
 });
-});
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM carregado. Iniciando script dinâmico do carrossel.");
@@ -114,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
       autor: "Paulo Borges",
       alt: "Capa do livro O planeta sombrio",
     },
-        {
+    {
       imagem: "assets/img/capa (1).png",
       titulo: "Nascer da estrela",
       autor: "Carla Abrantes",
@@ -251,8 +247,8 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   ];
 
-//carrossel dos livros de romance
-    const livrosRomance = [
+  //carrossel dos livros de romance
+  const livrosRomance = [
     {
       imagem: "assets/img/romance (1).png",
       titulo: "Encontrei você",
@@ -348,8 +344,7 @@ document.addEventListener("DOMContentLoaded", function () {
   popularCarrossel("#emalta", livrosEmAlta);
   popularCarrossel("#recentes", livrosRecentes);
   popularCarrossel("#terror", livrosTerror);
-    popularCarrossel("#romance", livrosRomance);
-
+  popularCarrossel("#romance", livrosRomance);
 
   function initializeCarousel(slider) {
     const list = slider.querySelector(".list");
@@ -439,5 +434,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-

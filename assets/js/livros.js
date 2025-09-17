@@ -65,18 +65,18 @@ document.addEventListener("DOMContentLoaded", () => {
     //livros
     document.getElementById("capa-livro").src = livro.capa;
     // CÓDIGO NOVO E CORRETO
-const tagsContainer = document.getElementById("tags");
-tagsContainer.innerHTML = ""; // Limpa quaisquer tags antigas
+    const tagsContainer = document.getElementById("tags");
+    tagsContainer.innerHTML = ""; // Limpa quaisquer tags antigas
 
-livro.tags.forEach(tagText => {
-  // Cria um elemento <span> para cada tag
-  const tagElement = document.createElement("span");
-  tagElement.className = "tag-item"; // Adiciona uma classe para estilização
-  tagElement.textContent = tagText;  // Define o texto da tag
+    livro.tags.forEach((tagText) => {
+      // Cria um elemento <span> para cada tag
+      const tagElement = document.createElement("span");
+      tagElement.className = "tag-item"; // Adiciona uma classe para estilização
+      tagElement.textContent = tagText; // Define o texto da tag
 
-  // Adiciona a nova tag dentro da div "tags"
-  tagsContainer.appendChild(tagElement);
-});
+      // Adiciona a nova tag dentro da div "tags"
+      tagsContainer.appendChild(tagElement);
+    });
     document.getElementById("titulo-livro").textContent = livro.titulo;
     document.getElementById("sinopse-livro").textContent = livro.sinopse;
 

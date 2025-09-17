@@ -1,4 +1,3 @@
-
 // wrap do login e do cadastro
 let loginForm = document.querySelector(".login-wrap");
 let signupForm = document.querySelector(".signup-wrap");
@@ -18,5 +17,3 @@ loginToggleBtn.onclick = () => {
   loginForm.classList.add("active");
   title.textContent = "Entrar";
 };
-
-
