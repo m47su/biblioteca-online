@@ -34,7 +34,7 @@
 
       <nav class="navbar">
         <a href="home.html"><i class="bx bx-home"></i></a>
-        <a href="curtidos"><i class="bx bx-heart"></i></a>
+        <a href="#favoritos"><i class="bx bx-heart"></i></a>
       </nav>
 
       <div class="search-container">
@@ -83,11 +83,24 @@
 
     <section class="avaliacoes-section">
       <h2>Avaliar livro</h2>
-      <div class="avaliar-box">
-        <!--  essa logo não será padrão, eu imagino, então isso aqui é só um placeholder -->
+      <div class="avaliar-box" id="avaliar-box">
         <img src="assets/img/logohome.png" alt="Sua foto" />
-        <textarea placeholder="Escreva sua avaliação..."></textarea>
-        <button><i class="fa-solid fa-paper-plane"></i></button>
+        <div
+          style="flex: 1; display: flex; flex-direction: column; gap: 0.6rem"
+        >
+          <div
+            id="rating-stars"
+            class="avaliacao-estrelas"
+            aria-label="Avaliar por estrelas"
+          ></div>
+          <textarea
+            id="review-text"
+            placeholder="Escreva sua avaliação..."
+          ></textarea>
+        </div>
+        <button id="send-review" title="Enviar avaliação">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
       </div>
 
       <h2>Principais avaliações</h2>
