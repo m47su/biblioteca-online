@@ -197,3 +197,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+//LOGOUT
+(function () {
+  const API_BASE = window.ELIVROS_API_BASE || "/api";
+
+  document.querySelectorAll("[data-logout]").forEach((el) => {
+    el.addEventListener("click", async (e) => {
+      e.preventDefault();
+      const destino = el.getAttribute("href") || "index.html";
+      el.disabled = true; // se for <button>, evita duplo clique
+      try {
+        await fetch(`${API_BASE}/auth/logout`, {
+          method: "POST",
+          credentials: "include",
+        });
+      } catch (_) {
+        /* ignora erro de rede */
+      }
+      window.location.assign(destino);
+    });
+  });
+})();
