@@ -379,3 +379,48 @@
   font-weight: 700 !important;
   border: 1px solid #2f3559 !important;
 }
+
+.admin-users .actions {
+  display: flex;
+  gap: 10px;
+  margin: 8px 0 12px;
+}
+
+.admin-users .actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  padding: 0 14px;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 13.5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+  background: transparent;
+  color: inherit;
+  margin-bottom: 2rem;
+}
+.admin-users .actions .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.admin-users .actions .add-user-btn {
+  background: #e25879;
+  color: #fff;
+  border: 1px solid #e84e67;
+}
+.admin-users .actions .add-user-btn:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.admin-users .actions .add-user-btn:active {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.admin-users .actions .export-users-btn {
+  background: #2f3559;
+  color: #fff;
+  border: 1px solid #2f3559;
+}

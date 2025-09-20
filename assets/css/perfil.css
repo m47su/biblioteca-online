@@ -237,7 +237,7 @@
 
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 35px;
 }
 
@@ -357,4 +357,39 @@
   .swal2-actions {
     flex-wrap: nowrap !important;
   }
+}
+.logout-section {
+  max-width: 900px;
+  margin: 32px auto 48px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn.btn-outline {
+  background: #fff;
+  color: var(--brand);
+  border: 1px solid #e5e7eb;
+}
+.btn.btn-outline:hover {
+  background: #f7f7f9;
+}
+
+.btn--lg {
+  padding: 1.1rem 1.6rem;
+  font-size: 1.5rem;
+}
+.btn--block {
+  width: 100%;
+  max-width: 520px;
+}
+.logout-section .btn {
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.logout-section .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+.logout-section .btn:active {
+  transform: translateY(-1px);
 }
