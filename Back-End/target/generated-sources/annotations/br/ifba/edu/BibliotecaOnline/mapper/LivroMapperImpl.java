@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-09-28T14:16:47-0300",
-    comments = "version: 1.6.3, compiler: javac, environment: Java 24.0.1 (Oracle Corporation)"
+    date = "2025-09-28T16:24:10-0300",
+    comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.8 (Arch Linux)"
 )
 @Component
 public class LivroMapperImpl implements LivroMapper {

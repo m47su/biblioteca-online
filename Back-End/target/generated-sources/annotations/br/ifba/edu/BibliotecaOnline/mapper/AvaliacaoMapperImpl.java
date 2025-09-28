@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-09-28T14:16:47-0300",
-    comments = "version: 1.6.3, compiler: javac, environment: Java 24.0.1 (Oracle Corporation)"
+    date = "2025-09-28T16:24:10-0300",
+    comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.8 (Arch Linux)"
 )
 @Component
 public class AvaliacaoMapperImpl implements AvaliacaoMapper {
@@ -24,6 +24,7 @@ public class AvaliacaoMapperImpl implements AvaliacaoMapper {
 
         avaliacaoDTO.setNomeUsuario( entityUsuarioNome( entity ) );
         avaliacaoDTO.setFotoUsuario( entityUsuarioFotoPerfil( entity ) );
+        avaliacaoDTO.setEmailUsuario( entityUsuarioEmail( entity ) );
         avaliacaoDTO.setId( entity.getId() );
         avaliacaoDTO.setComentario( entity.getComentario() );
         avaliacaoDTO.setNota( entity.getNota() );
@@ -46,5 +47,13 @@ public class AvaliacaoMapperImpl implements AvaliacaoMapper {
             return null;
         }
         return usuario.getFotoPerfil();
+    }
+
+    private String entityUsuarioEmail(AvaliacaoEntity avaliacaoEntity) {
+        Usuario usuario = avaliacaoEntity.getUsuario();
+        if ( usuario == null ) {
+            return null;
+        }
+        return usuario.getEmail();
     }
 }
