@@ -1,0 +1,28 @@
+package br.ifba.edu.BibliotecaOnline.entities;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.hibernate.envers.Audited;
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@Audited
+@Table(name = "TB_ROLE")
+public class Role {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    private Long id;
+
+    private String name;
+
+    public Role(String name){
+        this.name = name;
+    }
+
+
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Livros curtidos | Biblioteca Online</title>
+
+    <link rel="shortcut icon" th:href="@{/img/logo.png}" type="image/png" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <meta name="_csrf" th:content="${_csrf.token}" />
+    <meta name="_csrf_header" th:content="${_csrf.headerName}" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" th:href="@{/css/curtidos.css}" />
+    <link rel="stylesheet" th:href="@{/css/home-search.css}" />
+
+    <style>
+      html {
+        height: 100%;
+      }
+      
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .wrap-liked {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div th:replace="~{fragments/novo-header :: header}"></div>
+
+    <main class="wrap-liked">
+        <section class="liked-head">
+            <h1 class="liked-title">Livros curtidos</h1>
+            <p class="liked-sub">Veja os livros curtidos por você</p>
+        </section>
+
+        <div th:if="${paginaDeLivrosCurtidos.empty}" style="text-align: center; padding: 40px; color: #555;">
+            <p>Você ainda não curtiu nenhum livro.</p>
+        </div>
+
+        <section id="liked-grid" class="liked-grid" th:unless="${paginaDeLivrosCurtidos.empty}">
+            <div th:each="livro : ${paginaDeLivrosCurtidos.content}" class="book-card" th:data-book="${livro.id}">
+                <div class="book-cover">
+                    <a th:href="@{/livros/{id}(id=${livro.id})}" title="Capa do livro">
+                        <img th:src="${livro.capaUrl} ?: '/img/capas/placeholder.jpg'"
+                             th:alt="'Capa do livro ' + ${livro.nome}" />
+                    </a>
+
+                    <button class="heart-btn active" th:attr="data-livro-id=${livro.id}" title="Curtido">
+                        <i class="bx bxs-heart"></i>
+                    </button>
+                </div>
+                <h3 class="book-title" th:text="${livro.nome}"></h3>
+                <p class="book-author" th:text="${livro.autorNome}"></p>
+            </div>
+        </section>
+
+        <nav class="pagination-container" aria-label="Navegação de páginas" th:if="${paginaDeLivrosCurtidos.totalPages > 1}">
+            <ul class="pagination">
+                <li class="page-item" th:each="i : ${#numbers.sequence(0, paginaDeLivrosCurtidos.totalPages - 1)}" th:classappend="${i == paginaDeLivrosCurtidos.number} ? 'active'">
+                    <a class="page-link" th:href="@{/curtidos(page=${i}, size=${paginaDeLivrosCurtidos.size})}" th:text="${i + 1}"></a>
+                </li>
+            </ul>
+        </nav>
+    </main>
+
+    <div th:replace="~{fragments/novo-footer :: footer}"></div>
+
+    <script th:src="@{/js/script.js}"></script>
+    <script th:src="@{/js/curtidos.js}" type="module"></script>
+    <script th:src="@{/js/filtro-busca.js}" type="module"></script>
+</body>
+</html>
