@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be3a54f9-e7bc-4729-aec7-dec4cc55db33" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Back-End/src/main/java/br/ifba/edu/BibliotecaOnline/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/src/main/java/br/ifba/edu/BibliotecaOnline/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/src/main/java/br/ifba/edu/BibliotecaOnline/controller/LivroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/src/main/java/br/ifba/edu/BibliotecaOnline/controller/LivroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/src/main/java/br/ifba/edu/BibliotecaOnline/controller/PerfilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/src/main/java/br/ifba/edu/BibliotecaOnline/controller/PerfilController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/src/main/resources/templates/admin/publicar-livro.html" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/src/main/resources/templates/admin/publicar-livro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/br/ifba/edu/BibliotecaOnline/DTO/AvaliacaoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/br/ifba/edu/BibliotecaOnline/DTO/AvaliacaoDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/br/ifba/edu/BibliotecaOnline/config/InitialDataInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/br/ifba/edu/BibliotecaOnline/config/InitialDataInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/br/ifba/edu/BibliotecaOnline/mapper/AvaliacaoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/br/ifba/edu/BibliotecaOnline/mapper/AvaliacaoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/br/ifba/edu/BibliotecaOnline/mapper/AvaliacaoMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/br/ifba/edu/BibliotecaOnline/mapper/AvaliacaoMapperImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/br/ifba/edu/BibliotecaOnline/service/AvaliacaoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/br/ifba/edu/BibliotecaOnline/service/AvaliacaoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/br/ifba/edu/BibliotecaOnline/service/CurtidosService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/br/ifba/edu/BibliotecaOnline/service/CurtidosService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/br/ifba/edu/BibliotecaOnline/service/LivroService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/br/ifba/edu/BibliotecaOnline/service/LivroService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/br/ifba/edu/BibliotecaOnline/service/RecuperarSenhaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/br/ifba/edu/BibliotecaOnline/service/RecuperarSenhaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/br/ifba/edu/BibliotecaOnline/service/ServicosUsuariosPerfilService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/br/ifba/edu/BibliotecaOnline/service/ServicosUsuariosPerfilService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/br/ifba/edu/BibliotecaOnline/service/UsuarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/br/ifba/edu/BibliotecaOnline/service/UsuarioService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/classes/templates/detalhes-livro.html" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/classes/templates/detalhes-livro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/generated-sources/annotations/br/ifba/edu/BibliotecaOnline/mapper/AvaliacaoMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/generated-sources/annotations/br/ifba/edu/BibliotecaOnline/mapper/AvaliacaoMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/target/generated-sources/annotations/br/ifba/edu/BibliotecaOnline/mapper/LivroMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/target/generated-sources/annotations/br/ifba/edu/BibliotecaOnline/mapper/LivroMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/biblioteca.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/biblioteca.mv.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +23,12 @@
     &quot;assignee&quot;: &quot;IgorCauanAl&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/m47su/biblioteca-online.git&quot;,
-    &quot;accountId&quot;: &quot;a87ad6cb-7edd-49a3-aeeb-c26fe49bd3e6&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:m47su/biblioteca-online.git",
+    "accountId": "a87ad6cb-7edd-49a3-aeeb-c26fe49bd3e6"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -62,6 +47,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHELLCHECK.PATH": "/home/rogi/.local/share/JetBrains/IntelliJIdea2025.2/Shell Script/shellcheck",
     "Spring Boot.BibliotecaOnlineApplication.executor": "Run",
     "git-widget-placeholder": "Back-end",
@@ -104,7 +90,8 @@
       <option name="presentableId" value="Default" />
       <updated>1757002247290</updated>
       <workItem from="1757002249875" duration="2336000" />
-      <workItem from="1759079311896" duration="7221000" />
+      <workItem from="1759079311896" duration="8522000" />
+      <workItem from="1759117012968" duration="1239000" />
     </task>
     <servers />
   </component>
