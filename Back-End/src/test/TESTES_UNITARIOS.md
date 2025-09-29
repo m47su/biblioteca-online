@@ -100,15 +100,11 @@ Testa funcionalidades de gerenciamento de autores:
 - ✅ Verificar se autor existe antes de deletar
 - ✅ Buscar autor com todos os atributos preenchidos
 
-### 6. BibliotecaOnlineApplicationTests (1 teste)
-- ✅ Context loads (teste de inicialização da aplicação)
-
 ## Tecnologias Utilizadas
 
 - **JUnit 5**: Framework de testes
 - **Mockito**: Framework para criação de mocks
 - **Spring Boot Test**: Suporte para testes em aplicações Spring Boot
-- **AssertJ**: Biblioteca de assertions (implícita via JUnit)
 
 ## Padrões de Teste Implementados
 
@@ -177,16 +173,3 @@ Foi criado o arquivo `src/test/resources/mockito-extensions/org.mockito.plugins.
 - **Tempo de Execução**: ~9.6 segundos para todos os testes
 - **Manutenibilidade**: Alta (testes bem organizados e documentados)
 
-## Próximos Passos Recomendados
-
-1. Adicionar testes de integração para controllers
-2. Implementar testes para os demais serviços (EmailService, FileStorageService, etc.)
-3. Adicionar relatório de cobertura de código (JaCoCo)
-4. Implementar testes de performance
-5. Adicionar testes end-to-end com Selenium/Playwright
-
----
-
-**Data de Criação**: 29/09/2025
-**Versão**: 1.0
-**Status**: ✅ Todos os testes passando
