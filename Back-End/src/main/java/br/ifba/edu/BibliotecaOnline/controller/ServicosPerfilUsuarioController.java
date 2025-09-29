@@ -28,9 +28,9 @@ public class ServicosPerfilUsuarioController {
 
     //End Point para mudar a senha
     @PostMapping("/senha")
-    public ResponseEntity<String> mudarSenhaUser(@RequestBody MudarSenhaDTO mudarSenhaDto){
+    public ResponseEntity<String> mudarSenhaUser(@RequestBody MudarSenhaDTO mudarSenhaDto,HttpServletRequest request){
         try{
-            servicosUsuariosPerfilService.alterarSenha(mudarSenhaDto);
+            servicosUsuariosPerfilService.alterarSenha(mudarSenhaDto,request);
             return ResponseEntity.ok("Senha alterado com sucesso");
         }catch (Exception e){
             return ResponseEntity.badRequest().body("Senha não foi alterado com sucesso");
@@ -39,9 +39,9 @@ public class ServicosPerfilUsuarioController {
 
     //End Point para deletar a conta
     @PostMapping("/deletarConta")
-    public ResponseEntity<String> deletarConta(){
+    public ResponseEntity<String> deletarConta(HttpServletRequest request){
         try{
-            servicosUsuariosPerfilService.apagarConta();
+            servicosUsuariosPerfilService.apagarConta(request);
             return ResponseEntity.ok("Conta apagada com sucesso!");
         }catch(Exception e){
             return ResponseEntity.badRequest().body("Conta não foi apagada com sucesso!");

@@ -34,7 +34,7 @@ public class ServicosUsuariosPerfilService {
     private final PasswordEncoder passwordEncoder;
     private final UserDetailsService userDetailsService;
 
-    public void alterarSenha (MudarSenhaDTO dto){
+    public void alterarSenha (MudarSenhaDTO dto, HttpServletRequest request){
         //Authenticação do usuário
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String email = auth.getName(); // username
@@ -56,6 +56,9 @@ public class ServicosUsuariosPerfilService {
         //Mudança da senha
         usuario.setSenha(passwordEncoder.encode(dto.getSenhaNova()));
         usuarioRepository.save(usuario);
+
+        request.getSession().invalidate();
+        SecurityContextHolder.clearContext();
 
 
     }
@@ -83,7 +86,7 @@ public class ServicosUsuariosPerfilService {
     }
 
     @Transactional
-    public void apagarConta(){
+    public void apagarConta(HttpServletRequest request){
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String email = auth.getName();
         Usuario usuario = usuarioRepository.findByEmail(email)
@@ -91,6 +94,8 @@ public class ServicosUsuariosPerfilService {
 
 
         usuarioRepository.delete(usuario);
+
+        request.getSession().invalidate();
         SecurityContextHolder.clearContext();
 
     }
